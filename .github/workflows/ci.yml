@@ -2,20 +2,20 @@ name: Simple CI
 
 on:
   push:
-    branches:
-      - main
+    branches: [ "main" ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout repository code
         uses: actions/checkout@v4
 
-      - name: Check files
+      - name: Run Continuous Integration Demo
         run: |
-          echo "GitHub Actions is running"
+          echo "🔥 GitHub Actions is running"
           echo "Project files:"
-          ls
+          ls -1
           echo "CI completed successfully"
+
