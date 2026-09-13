@@ -1,1 +1,21 @@
+name: Simple CI
 
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Check files
+        run: |
+          echo "GitHub Actions is running"
+          echo "Project files:"
+          ls
+          echo "CI completed successfully"
